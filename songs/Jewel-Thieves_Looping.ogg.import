@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Jewel-Thieves_Looping.ogg-aeb1d70e7304296cb737fc856b7e4aa4.oggstr"
+
+[deps]
+
+source_file="res://songs/Jewel-Thieves_Looping.ogg"
+dest_files=[ "res://.import/Jewel-Thieves_Looping.ogg-aeb1d70e7304296cb737fc856b7e4aa4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

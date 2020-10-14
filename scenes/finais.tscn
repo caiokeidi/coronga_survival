@@ -1,0 +1,273 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/finais.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Base/fundo preto.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Base/modelo_canvas.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Base/box_normal_unlocked.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Base/box_pressed_unlocked.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Base/button_home_normal.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Base/button_home_pressed.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/letter-gothic-std/letter-gothic-std-bold.otf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/golden_dragon/golden-dragon-solid.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = SubResource( 3 )
+
+[node name="finais" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="fundo" type="Node2D" parent="."]
+
+[node name="fundo_preto" type="Sprite" parent="fundo"]
+position = Vector2( 298, 519.169 )
+scale = Vector2( 1.07195, 1.05547 )
+texture = ExtResource( 2 )
+
+[node name="canva_texto" type="Sprite" parent="fundo"]
+position = Vector2( 299.139, 579.402 )
+scale = Vector2( 1.12118, 0.630528 )
+texture = ExtResource( 3 )
+
+[node name="canvas" type="Sprite" parent="fundo"]
+position = Vector2( 298, 244.384 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="fundo"]
+margin_left = 41.0
+margin_top = 507.445
+margin_right = 559.0
+margin_bottom = 692.445
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="fundo"]
+margin_left = 34.0
+margin_top = 460.903
+margin_right = 560.0
+margin_bottom = 494.903
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="botoes" type="Node2D" parent="."]
+
+[node name="1" type="Node2D" parent="botoes"]
+position = Vector2( -15.0332, 242.108 )
+
+[node name="final_1" type="TouchScreenButton" parent="botoes/1"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/1"]
+margin_left = 97.1314
+margin_top = 484.552
+margin_right = 137.131
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 387.902, 53.3401 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+
+[node name="2" type="Node2D" parent="botoes"]
+position = Vector2( 84.8228, 242.927 )
+
+[node name="final_2" type="TouchScreenButton" parent="botoes/2"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/2"]
+margin_left = 95.2998
+margin_top = 482.72
+margin_right = 135.3
+margin_bottom = 556.72
+rect_pivot_offset = Vector2( 288.046, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "2"
+
+[node name="3" type="Node2D" parent="botoes"]
+position = Vector2( 184.679, 242.927 )
+
+[node name="final_3" type="TouchScreenButton" parent="botoes/3"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/3"]
+margin_left = 95.2998
+margin_top = 484.552
+margin_right = 135.3
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 188.19, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "3"
+
+[node name="4" type="Node2D" parent="botoes"]
+position = Vector2( 284.535, 242.927 )
+
+[node name="final_4" type="TouchScreenButton" parent="botoes/4"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/4"]
+margin_left = 91.6365
+margin_top = 484.552
+margin_right = 131.637
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 88.3339, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "4"
+
+[node name="5" type="Node2D" parent="botoes"]
+position = Vector2( 385.209, 242.927 )
+
+[node name="final_5" type="TouchScreenButton" parent="botoes/5"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/5"]
+margin_left = 94.3839
+margin_top = 484.552
+margin_right = 134.384
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( -12.3406, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "5"
+
+[node name="6" type="Node2D" parent="botoes"]
+position = Vector2( -15.0332, 341.554 )
+
+[node name="final_6" type="TouchScreenButton" parent="botoes/6"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/6"]
+margin_left = 94.384
+margin_top = 484.552
+margin_right = 134.384
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 387.902, 53.3401 )
+custom_fonts/font = SubResource( 4 )
+text = "6"
+
+[node name="7" type="Node2D" parent="botoes"]
+position = Vector2( 84.8228, 342.372 )
+
+[node name="final_7" type="TouchScreenButton" parent="botoes/7"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/7"]
+margin_left = 92.5523
+margin_top = 484.552
+margin_right = 132.552
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 288.046, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "7"
+
+[node name="8" type="Node2D" parent="botoes"]
+position = Vector2( 184.679, 342.372 )
+
+[node name="final_8" type="TouchScreenButton" parent="botoes/8"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/8"]
+margin_left = 95.2998
+margin_top = 484.552
+margin_right = 135.3
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 188.19, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "8"
+
+[node name="9" type="Node2D" parent="botoes"]
+position = Vector2( 284.535, 342.372 )
+
+[node name="final_9" type="TouchScreenButton" parent="botoes/9"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/9"]
+margin_left = 94.384
+margin_top = 484.552
+margin_right = 134.384
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( 88.3339, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "9"
+
+[node name="10" type="Node2D" parent="botoes"]
+position = Vector2( 385.209, 342.372 )
+
+[node name="final_10" type="TouchScreenButton" parent="botoes/10"]
+position = Vector2( 66.5694, 475.741 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/10"]
+margin_left = 76.8993
+margin_top = 484.552
+margin_right = 146.899
+margin_bottom = 558.552
+rect_pivot_offset = Vector2( -12.3406, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "10"
+
+[node name="11" type="Node2D" parent="botoes"]
+position = Vector2( 184.289, 439.788 )
+
+[node name="final_11" type="TouchScreenButton" parent="botoes/11"]
+position = Vector2( 32.6843, 475.741 )
+scale = Vector2( 1.79636, 1 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+
+[node name="label_1" type="Label" parent="botoes/11"]
+margin_left = 87.0575
+margin_top = 483.636
+margin_right = 149.057
+margin_bottom = 557.636
+rect_pivot_offset = Vector2( -12.3406, 52.5216 )
+custom_fonts/font = SubResource( 4 )
+text = "11"
+
+[node name="home" type="Node2D" parent="botoes"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="botoes/home"]
+position = Vector2( 18.5453, 24.7269 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 7 )
+[connection signal="released" from="botoes/1/final_1" to="." method="_on_final_1_released"]
+[connection signal="released" from="botoes/2/final_2" to="." method="_on_final_2_released"]
+[connection signal="released" from="botoes/3/final_3" to="." method="_on_final_3_released"]
+[connection signal="released" from="botoes/4/final_4" to="." method="_on_final_4_released"]
+[connection signal="released" from="botoes/5/final_5" to="." method="_on_final_5_released"]
+[connection signal="released" from="botoes/6/final_6" to="." method="_on_final_6_released"]
+[connection signal="released" from="botoes/7/final_7" to="." method="_on_final_7_released"]
+[connection signal="released" from="botoes/8/final_8" to="." method="_on_final_8_released"]
+[connection signal="released" from="botoes/9/final_9" to="." method="_on_final_9_released"]
+[connection signal="released" from="botoes/10/final_10" to="." method="_on_final_10_released"]
+[connection signal="released" from="botoes/11/final_11" to="." method="_on_final_11_released"]
+[connection signal="released" from="botoes/home/TouchScreenButton" to="." method="_on_TouchScreenButton_released"]

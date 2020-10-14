@@ -1,0 +1,123 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/sobre.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Base/fundo preto.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Base/button_home_normal.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Base/button_home_pressed.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("labels:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TouchScreenButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://fonts/golden_dragon/golden-dragon-solid.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 61
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://fonts/letter-gothic-std/letter-gothic-std-bold.otf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://fonts/letter-gothic-std/letter-gothic-std-bold.otf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 35
+font_data = SubResource( 6 )
+
+[node name="sobre" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fundo" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="fundo"]
+position = Vector2( 294.663, 517.206 )
+scale = Vector2( 1.17858, 1.05634 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/intro = SubResource( 1 )
+
+[node name="labels" type="Node2D" parent="."]
+
+[node name="titulo" type="Label" parent="labels"]
+margin_left = 89.2317
+margin_top = 29.6791
+margin_right = 521.232
+margin_bottom = 104.679
+custom_fonts/font = SubResource( 3 )
+text = "SOBRE O JOGO"
+
+[node name="Label" type="Label" parent="labels"]
+margin_left = -27.8358
+margin_top = 123.454
+margin_right = 620.164
+margin_bottom = 624.454
+custom_fonts/font = SubResource( 5 )
+text = "Esse jogo foi produzido no tédio
+da quarentena de um pequeno curioso
+da programação! Foi meu primeiro 
+jogo completo, por isso, se quiser 
+dar um apoio é só me seguir no
+instagram ou twitter!
+
+É basicamente um jogo de escolhas!
+ Faça as suas para chegar até o
+ final! Ou melhor, até um dos NOVE
+ finais! 
+
+Obs.: O jogo é 99% ficcional, qualquer
+semelhança é mera coincidência.
+(Mesmo o Presidente é ficcional)
+
+quem dera.
+
+
+Músicas por:
+Eric Mathias - www.soundimage.org"
+align = 1
+
+[node name="Label2" type="Label" parent="labels"]
+margin_left = 86.5444
+margin_top = 762.415
+margin_right = 527.544
+margin_bottom = 837.415
+custom_fonts/font = SubResource( 7 )
+text = "Instagram: @caiokeidi
+Twitter: @caiokeidi"
+align = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 244.667, 873.036 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]

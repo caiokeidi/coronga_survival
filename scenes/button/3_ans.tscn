@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/3_ans.gd" type="Script" id=1]
+[ext_resource path="res://scenes/button/button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/button/button2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/button/button3.tscn" type="PackedScene" id=4]
+
+[node name="3_ans" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="button" parent="." instance=ExtResource( 2 )]
+position = Vector2( 90, 696 )
+
+[node name="button2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 90, 792 )
+
+[node name="button3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 90, 889 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.01
